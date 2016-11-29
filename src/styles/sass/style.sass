@@ -1,0 +1,89 @@
+$navColor: #87b448
+$mainFontColor: #1c2534
+$headFontWhite: #fff
+
+// Центрирование блока по горизонтали и по вертикали
+=vcenter
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+=clr
+  &:after
+    content: " "
+    display: table
+    clear: both
+  *zoom: 1
+
+.clr
+  +clr
+
+//import
+@import ../../../bower_components/normalize-css/normalize
+@import fonts
+@import spriteSVG
+//@import owl.carousel
+//@import owl.theme
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  font-family: 'proxima_nova', sans-serif
+  color: $mainFontColor
+
+.wrapper
+  margin: 0 auto
+  max-width: 970px
+  min-width: 970px
+  padding: 0 15px
+
+//==============  HEADER  ===============
+
+.header
+  background-color: $navColor
+  border-bottom: 2px solid #71973c
+  height: 68px
+  padding-top: 10px
+
+.nav
+  display: table
+  width: 100%
+  &__logo
+    display: table-cell
+    width: 162px
+  &__search
+    display: table-cell
+    vertical-align: middle
+    padding: 0 30px
+    width: 100%
+    input
+      margin-top: 3px
+      background-color: #73993d
+      height: 34px
+      border: none
+      width: 100%
+      border-radius: 5px
+      padding: 0 38px
+      color: white
+      font-size: 15px
+  &__icons
+    cursor: pointer
+    text-align: center
+    margin-right: 15px
+  &__user
+    vertical-align: middle
+    text-align: right
+    white-space: nowrap
+    
+
+
+
+
+
+
+
+//@import media

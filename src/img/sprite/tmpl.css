@@ -1,0 +1,21 @@
+
+/*.no-svg .<%=common %>:before {*/
+    /*background-image: url("<%=pngPath%>");*/
+/*}*/
+
+<% _.forEach(svg, function(svgItem) { %>
+
+  .<%=common %>-<%=svgItem.name%> {
+    font-size: <%= baseSize %>px;
+    display: inline-block;
+    background-image: url("<%=svgPath%>");
+    background-repeat: no-repeat;
+    background-size: <%= relWidth %>em <%= relHeight %>em;
+      background-position: <%= svgItem.relPositionX %>em <%= svgItem.relPositionY %>em;
+      width: <%= svgItem.relWidth %>em;
+      height: <%= svgItem.relHeight %>em;
+  }
+
+<% }); %>
+
+

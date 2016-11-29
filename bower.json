@@ -1,0 +1,23 @@
+{
+  "name": "denteez",
+  "description": "test task",
+  "main": "buil/index.html",
+  "authors": [
+    "Sergey Stelmakh <stelmakhserg@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS",
+    "Angular"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

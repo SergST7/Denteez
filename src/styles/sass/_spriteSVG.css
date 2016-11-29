@@ -1,0 +1,164 @@
+
+/*.no-svg .icon:before {*/
+    /*background-image: url("../sprite.png");*/
+/*}*/
+
+
+
+  .icon-ask {
+    font-size: 10px;
+    display: inline-block;
+    background-image: url("../../img/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.5997em 28.8em;
+      background-position: 0em 0em;
+      width: 2.4013em;
+      height: 2.3644em;
+  }
+
+
+
+  .icon-ask-h {
+    font-size: 10px;
+    display: inline-block;
+    background-image: url("../../img/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.5997em 28.8em;
+      background-position: 0em -2.4em;
+      width: 2.4013em;
+      height: 2.3644em;
+  }
+
+
+
+  .icon-bell {
+    font-size: 10px;
+    display: inline-block;
+    background-image: url("../../img/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.5997em 28.8em;
+      background-position: 0em -4.8em;
+      width: 2.3998em;
+      height: 2.4002em;
+  }
+
+
+
+  .icon-bell-h {
+    font-size: 10px;
+    display: inline-block;
+    background-image: url("../../img/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.5997em 28.8em;
+      background-position: 0em -7.3em;
+      width: 2.3998em;
+      height: 2.4002em;
+  }
+
+
+
+  .icon-chat {
+    font-size: 10px;
+    display: inline-block;
+    background-image: url("../../img/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.5997em 28.8em;
+      background-position: 0em -9.8em;
+      width: 2.5997em;
+      height: 2.2001em;
+  }
+
+
+
+  .icon-chat-h {
+    font-size: 10px;
+    display: inline-block;
+    background-image: url("../../img/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.5997em 28.8em;
+      background-position: 0em -12.1em;
+      width: 2.5997em;
+      height: 2.2001em;
+  }
+
+
+
+  .icon-companies {
+    font-size: 10px;
+    display: inline-block;
+    background-image: url("../../img/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.5997em 28.8em;
+      background-position: 0em -14.4em;
+      width: 2.1em;
+      height: 2.4em;
+  }
+
+
+
+  .icon-companies-h {
+    font-size: 10px;
+    display: inline-block;
+    background-image: url("../../img/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.5997em 28.8em;
+      background-position: 0em -16.8em;
+      width: 2.1em;
+      height: 2.4em;
+  }
+
+
+
+  .icon-feed {
+    font-size: 10px;
+    display: inline-block;
+    background-image: url("../../img/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.5997em 28.8em;
+      background-position: 0em -19.2em;
+      width: 2.3876em;
+      height: 2.3003em;
+  }
+
+
+
+  .icon-feed-h {
+    font-size: 10px;
+    display: inline-block;
+    background-image: url("../../img/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.5997em 28.8em;
+      background-position: 0em -21.6em;
+      width: 2.3876em;
+      height: 2.3003em;
+  }
+
+
+
+  .icon-servis {
+    font-size: 10px;
+    display: inline-block;
+    background-image: url("../../img/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.5997em 28.8em;
+      background-position: 0em -24em;
+      width: 1.9em;
+      height: 2.4em;
+  }
+
+
+
+  .icon-servis-h {
+    font-size: 10px;
+    display: inline-block;
+    background-image: url("../../img/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 2.5997em 28.8em;
+      background-position: 0em -26.4em;
+      width: 1.9em;
+      height: 2.4em;
+  }
+
+
+
+

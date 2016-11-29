@@ -1,0 +1,50 @@
+{
+  "name": "denteez",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "buil/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS",
+    "Angular"
+  ],
+  "author": "Sergey Stelmakh <stelmakhserg@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "browser-sync": "^2.17.3",
+    "del": "^2.2.2",
+    "grunt": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-minify": "0.0.14",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.2",
+    "gulp-svg-sprites": "^4.0.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.10",
+    "gulp.spritesmith": "^6.2.1",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "del": "^2.2.2",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-optipng": "^5.2.1",
+    "imagemin-pngquant": "^5.0.0"
+  }
+}
