@@ -769,30 +769,35 @@ body {
   padding: 0;
 }
 
-.companies {
+.companies, .people, .products {
   padding: 15px 0;
   border-bottom: 1px solid #e0e2e6;
 }
 
-.companies__head {
+.companies__head, .people__head, .products__head {
   font-size: 14px;
   color: #7c8695;
 }
 
-.companies__see-all {
+.companies__see-all, .people__see-all, .products__see-all {
   float: right;
   font-size: 14px;
   color: #1c2534;
 }
 
-.companies__item {
+.companies__item, .people__item, .products__item {
   padding-top: 16px;
   font-size: 14px;
   color: #7c8695;
 }
 
-.companies__item-description {
+.companies__item-foto, .people__item-foto, .products__item-foto {
+  border-radius: 5px;
+}
+
+.companies__item-description, .people__item-description, .products__item-description {
   display: inline-block;
+  width: 128px;
   vertical-align: top;
   padding: 0 0 0 5px;
 }
@@ -801,11 +806,11 @@ body {
   font-size: 16px;
 }
 
-.companies__item-location {
+.companies__item-location, .people__item-location {
   padding-top: 6px;
 }
 
-.companies__item-link {
+.companies__item-link, .people__item-link {
   font-size: 12px;
   color: #1c2534;
 }
@@ -817,6 +822,7 @@ body {
 }
 
 .companies__wrap-link {
+  margin-bottom: 20px;
   font-size: 12px;
   color: #b7bfcd;
 }
@@ -830,6 +836,43 @@ body {
   margin-left: 17px;
 }
 
+.sidebar {
+  margin-left: -213px;
+  width: 213px;
+  float: right;
+  height: 100%;
+}
+
+.people {
+  padding-bottom: 18px;
+}
+
+.people__item {
+  padding-top: 14px;
+}
+
+.people__item-name {
+  margin-bottom: 6px;
+}
+
+.people__item-name a {
+  font-size: 16px;
+  color: #1c2534;
+}
+
+.products__item {
+  padding-top: 14px;
+}
+
+.products__item-name {
+  margin-bottom: 6px;
+}
+
+.products__item-name a {
+  font-size: 16px;
+  color: #1c2534;
+}
+
 .main {
   float: left;
   width: 100%;
@@ -840,13 +883,5 @@ body {
 .artile {
   margin-left: 212px;
   margin-right: 213px;
-  height: 100%;
-}
-
-.sidebar {
-  margin-left: -29.0476%;
-  width: 213px;
-  float: right;
-  background: #fc0;
   height: 100%;
 }

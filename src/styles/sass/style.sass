@@ -1,13 +1,19 @@
 $navColor: #87b448
 $mainFontColor: #1c2534
 
-
 // Центрирование блока по горизонтали и по вертикали
 =vcenter
   position: absolute
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
+
+// Обрезание текста с 3 точиями
+=text-overflow
+  overflow: hidden
+  -ms-text-overflow: ellipsis
+  text-overflow: ellipsis
+  white-space: nowrap
 
 =clr
   &:after
@@ -39,7 +45,9 @@ body
   background-color: #fff
   height: 100%
 
+
 //======= Advertisement =============
+
 .wrap
   &__advert-title
     margin: 17px 0px
@@ -58,6 +66,7 @@ body
   min-width: 970px
   padding: 0 15px
   height: 100%
+
 
 //==============  HEADER  ===============
 
@@ -166,8 +175,11 @@ body
     padding-top: 16px
     font-size: 14px
     color:  #7c8695
+    &-foto
+      border-radius: 5px
     &-description
       display: inline-block
+      width: 128px
       vertical-align: top
       padding: 0 0 0 5px
     &-name
@@ -183,6 +195,7 @@ body
     color: #b7bfcd
     margin: 16px 0
   &__wrap-link
+    margin-bottom: 20px
     font-size: 12px
     color: #b7bfcd
     .terms, .policy
@@ -191,6 +204,58 @@ body
     .policy
       margin-left: 17px
 
+
+// ==========  SIDEBAR - RIGHT ============== -->
+
+.sidebar
+  margin-left: -213px
+  width: 213px
+  float: right
+  height: 100%
+
+
+.people
+  @extend .companies
+  padding-bottom: 18px
+  &__head
+    @extend .companies__head
+  &__see-all
+    @extend .companies__see-all
+  &__item
+    @extend .companies__item
+    padding-top: 14px
+    &-foto
+      @extend .companies__item-foto
+    &-description
+      @extend .companies__item-description
+    &-name
+      margin-bottom: 6px
+      a
+        font-size: 16px
+        color: $mainFontColor
+    &-location
+      @extend .companies__item-location
+    &-link
+      @extend .companies__item-link
+
+.products
+  @extend .companies
+  &__head
+    @extend .companies__head
+  &__see-all
+    @extend .companies__see-all
+  &__item
+    @extend .companies__item
+    padding-top: 14px
+    &-foto
+      @extend .companies__item-foto
+    &-description
+      @extend .companies__item-description
+    &-name
+      margin-bottom: 6px
+      a
+        font-size: 16px
+        color: $mainFontColor
 
 .main
   float: left
@@ -203,12 +268,6 @@ body
   margin-right: 213px
   height: 100%
 
-.sidebar
-  margin-left: -29.0476%
-  width: 213px
-  float: right
-  background: #fc0
-  height: 100%
 
 
 
