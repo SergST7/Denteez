@@ -172,7 +172,7 @@ gulp.task('scripts', function () {
 
 // задача сборки проекта, до запуска build будут выполнены задачи из массива
 gulp.task('build', function () {
-    runSequence('clean', 'sass',
-        [ 'html', 'styles', 'spriteSVG', 'images', 'scripts']
+    runSequence('clean', 'sass', 'spriteSVG',
+        [ 'html', 'styles',  'images', 'scripts']
     );
 });
