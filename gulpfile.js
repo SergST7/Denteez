@@ -30,7 +30,7 @@ var PATHS = {
             'src/scripts/main.js'
         ],
         images: 'src/img/*.*',
-        fonts: 'src/fonts/**/*.*'
+        fonts: 'src/fonts/**/*'
     },
     build: {
         html: 'build/',
@@ -48,7 +48,7 @@ var PATHS = {
     }
 };
 
-//Очистка папки
+//Очистка папки build
 gulp.task('clean', function () {
     return clean('build/**/*');
 });
@@ -86,7 +86,14 @@ gulp.task('watch', ['browser-sync'], function () {
 
 //BUILD TASKS
 
-//сборка спрайтов
+// задача по сборке FONTS
+gulp.task('fonts', function () {
+    gulp.src(PATHS.src.fonts)
+        .pipe(gulp.dest(PATHS.build.fonts));
+});
+
+
+//сборка спрайтов png
 // gulp.task('sprite', function () {
 //     var spriteData = gulp.src('src/img/sprite/*.png').pipe(spritesmith({
 //         imgName: 'sprite.png',
@@ -126,15 +133,15 @@ gulp.task('html', function () {
 gulp.task('images', function () {
     return gulp.src(PATHS.src.images)
         .pipe(plumber())
-        // .pipe(cache(imagemin({
-        //     progressive: true,
-        //     svgoPlugins: [{
-        //         removeViewBox: false
-        //     }],
-        //     verbose: true,
-        //     use: [pngquant(), jpegtran()],
-        //     interlaced: true
-        // })))
+        .pipe(cache(imagemin({
+            progressive: true,
+            svgoPlugins: [{
+                removeViewBox: false
+            }],
+            verbose: true,
+            use: [pngquant(), jpegtran()],
+            interlaced: true
+        })))
         .pipe(gulp.dest(PATHS.build.images))
         .pipe(browserSync.reload({stream: true})); // перезагрузим сервер
 });
@@ -160,11 +167,11 @@ gulp.task('scripts', function () {
         .pipe(plumber())
         .pipe(rigger()) //Прогоним через rigger
         .pipe(sourcemaps.init()) //Инициализируем sourcemap
-        .pipe(uglify({
-            ext:{
-                min:'.min.js'
-            }
-        })) //минификация  js
+        // .pipe(uglify({
+        //     ext:{
+        //         min:'.min.js'
+        //     }
+        // })) //минификация  js
         .pipe(sourcemaps.write()) //Пропишем карты
         .pipe(gulp.dest(PATHS.build.scripts))
         .pipe(browserSync.reload({stream: true})); // перезагрузим сервер
@@ -172,7 +179,7 @@ gulp.task('scripts', function () {
 
 // задача сборки проекта, до запуска build будут выполнены задачи из массива
 gulp.task('build', function () {
-    runSequence('clean', 'sass', 'spriteSVG',
+    runSequence('clean', 'sass', 'spriteSVG', 'fonts', 'watch',
         [ 'html', 'styles',  'images', 'scripts']
     );
 });

@@ -19,5 +19,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular-strap": "^2.3.10",
+    "bootstrap": "^3.3.7"
+  }
 }

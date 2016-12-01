@@ -1,6 +1,7 @@
 $navColor: #87b448
 $mainFontColor: #1c2534
 
+
 // Центрирование блока по горизонтали и по вертикали
 =vcenter
   position: absolute
@@ -27,9 +28,9 @@ $mainFontColor: #1c2534
 
 //import
 @import ../../../bower_components/normalize-css/normalize
+@import ../../../bower_components/bootstrap/dist/css/bootstrap.css
 @import fonts
 @import spriteSVG
-
 
 *
   -webkit-box-sizing: border-box
@@ -37,7 +38,10 @@ $mainFontColor: #1c2534
   box-sizing: border-box
 
 a
-  text-decoration: none
+  text-decoration:  none
+  &:hover
+    text-decoration: none
+
 
 body
   font-family: 'proxima_nova', sans-serif
@@ -50,19 +54,19 @@ body
 
 .wrap
   &__advert-title
-    margin: 17px 0px
+    margin: 14px 0px
     font-size: 14px
     color: #7c8695
   &__advert-by
     color: #d3d3d3
     font-size: 11px
-    padding-bottom: 20px
+    margin-top: 6px
+    padding-bottom: 16px
     border-bottom: 1px solid #e0e2e6
-
 
 .wrapper
   margin: 0 auto
-  max-width: 970px
+  max-width: 1440px
   min-width: 970px
   padding: 0 15px
   height: 100%
@@ -89,7 +93,7 @@ body
     padding: 0 30px
     width: 100%
     input
-      margin-top: 3px
+      margin-top: 5px
       background-color: #73993d
       height: 34px
       border: none
@@ -110,7 +114,7 @@ body
   &__icons
     cursor: pointer
     text-align: center
-    margin: 5px 15px 0 0
+    margin: 8px 17px 0 0
     vertical-align: top
   &__user
     vertical-align: middle
@@ -127,7 +131,7 @@ body
         border-radius: 50%
     span
       font-size: 16px
-      line-height: 32px
+      line-height: 38px
       color: white
       display: inline-block
       vertical-align: top
@@ -172,28 +176,33 @@ body
     font-size: 14px
     color: $mainFontColor
   &__item
-    padding-top: 16px
+    padding-top: 10px
     font-size: 14px
     color:  #7c8695
     &-foto
       border-radius: 5px
     &-description
+      +text-overflow
       display: inline-block
       width: 128px
+      height: 90px
       vertical-align: top
       padding: 0 0 0 5px
     &-name
       font-size: 16px
+      a
+        font-size: 16px
+        color: $mainFontColor
     &-activity
     &-location
-      padding-top: 6px
+      padding-top: 0px
     &-link
       font-size: 12px
       color: $mainFontColor
   &__copyright
     font-size: 12px
     color: #b7bfcd
-    margin: 16px 0
+    margin: 15px 0 10px
   &__wrap-link
     margin-bottom: 20px
     font-size: 12px
@@ -213,22 +222,24 @@ body
   float: right
   height: 100%
 
-
 .people
   @extend .companies
-  padding-bottom: 18px
+  padding-bottom: 14px
   &__head
     @extend .companies__head
   &__see-all
     @extend .companies__see-all
   &__item
     @extend .companies__item
-    padding-top: 14px
+    padding-top: 5px
     &-foto
       @extend .companies__item-foto
+    &-activity
+      white-space: normal
     &-description
       @extend .companies__item-description
     &-name
+      +text-overflow
       margin-bottom: 6px
       a
         font-size: 16px
@@ -251,24 +262,64 @@ body
       @extend .companies__item-foto
     &-description
       @extend .companies__item-description
+      white-space: normal
     &-name
-      margin-bottom: 6px
-      a
-        font-size: 16px
-        color: $mainFontColor
+      @extend .people__item-name
+
+
+// ==========  CONTENT - CENTER ============== -->
+
 
 .main
   float: left
   width: 100%
   height: 100%
-  background: #afccdb
+  &__header
+    margin-bottom: 18px
 
-.artile
+.content-center
   margin-left: 212px
   margin-right: 213px
   height: 100%
+  padding: 11px 15px
+  &__header
+    margin: 0
+    float: left
+    font-size: 30px
+  &__add-service
+    margin: 0
+    padding: 7px 19px
+    font-size: 14px
+    color: white
+    float: right
+    background-color: $navColor
+    cursor: pointer
+    border: 0
+    border-radius: 5px
 
-
-
-
-//@import media
+.category
+  width: 100%
+  text-align: justify
+  border: 1px solid #e0e2e6
+  border-radius: 5px
+  padding: 15px 0
+  &:after
+    width: 100%
+    content: ''
+    display: inline-block
+  &__item
+    //background-color: gray
+    vertical-align: top
+    width: 140px
+    display: inline-block
+    margin: 0 10px
+    &-link
+      display: inline-block
+      text-align: center
+    img
+      width: 100%
+      border: 1px solid #e0e2e6
+      height: auto
+    &-title
+      font-size: 14px
+      margin:  16px 0

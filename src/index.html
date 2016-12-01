@@ -5,10 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Test Task</title>
 	<link rel="stylesheet" href="styles/css/style.css">
-	<!--<script src="scripts/main.min.js"></script>-->
+	<!--<script src="../bower_components/angular/angular.js"></script>-->
+	<!--<script src="../bower_components/angular-route/angular-route.js"></script>-->
+	<!--<script src="../bower_components/angular-strap/dist/angular-strap.js"></script>-->
+	<!--<script src="../bower_components/angular-strap/dist/angular-strap.tpl.js"></script>-->
+	<!--&lt;!&ndash;<script src="scripts/main.min.js"></script>&ndash;&gt;-->
+	<script src="scripts/main.js"></script>
 
 </head>
-<body>
+<body ng-app="myApp">
 
 <!--======== HEADER ==============-->
 
@@ -43,9 +48,17 @@
 
 <div class="wrapper clr">
 
+	<!-- ==========  CONTENT - CENTER ============== -->
 	<div class="main">
-		<div class="artile">
-			<h1>Колонка 2</h1>
+		<div class="content-center">
+			<div class="main__header clr">
+			<h1 class="content-center__header">Service Directory</h1>
+			<button class="content-center__add-service">Add New Service</button>
+			</div>
+			<div class="category" ng-view>
+
+			</div>
+
 		</div>
 	</div>
 
@@ -99,10 +112,7 @@
 				<div class="products__item-name"><a href="#">Product Name</a></div>
 				<img src="img/prod1.jpg" alt="" class="products__item-foto">
 				<div class="products__item-description">
-					Product Short
-					Description. The quick brown
-					fox jumps over the
-					lazy dog.
+					Product Short Description. The quick fox jumps over the lazy dog.
 				</div>
 			</div>
 
