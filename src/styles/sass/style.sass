@@ -41,6 +41,10 @@ a
   text-decoration:  none
   &:hover
     text-decoration: none
+  &:visited
+    text-decoration: none
+  &:focus
+    text-decoration: none
 
 
 body
@@ -48,6 +52,7 @@ body
   color: $mainFontColor
   background-color: #fff
   height: 100%
+
 
 
 //======= Advertisement =============
@@ -308,14 +313,18 @@ body
     content: ''
     display: inline-block
   &__item
+    //font-weight: normal
     //background-color: gray
-    vertical-align: top
-    width: 140px
-    display: inline-block
-    margin: 0 10px
+    display: inline
+    //display: inline-block
+
     &-link
+      margin: 0 9px
+      vertical-align: top
+      width: 140px
       display: inline-block
       text-align: center
+
     img
       width: 100%
       border: 1px solid #e0e2e6
@@ -323,3 +332,4 @@ body
     &-title
       font-size: 14px
       margin:  16px 0
+      color: $mainFontColor

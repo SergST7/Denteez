@@ -625,6 +625,14 @@ a:hover {
   text-decoration: none;
 }
 
+a:visited {
+  text-decoration: none;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
 body {
   font-family: 'proxima_nova', sans-serif;
   color: #1c2534;
@@ -942,13 +950,13 @@ body {
 }
 
 .category__item {
-  vertical-align: top;
-  width: 140px;
-  display: inline-block;
-  margin: 0 10px;
+  display: inline;
 }
 
 .category__item-link {
+  margin: 0 9px;
+  vertical-align: top;
+  width: 140px;
   display: inline-block;
   text-align: center;
 }
@@ -962,4 +970,5 @@ body {
 .category__item-title {
   font-size: 14px;
   margin: 16px 0;
+  color: #1c2534;
 }
